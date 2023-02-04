@@ -1,0 +1,88 @@
+.roadmap {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  list-style: none;
+  padding: 0;
+  font-size: 8px;
+  line-height: 125%;
+  letter-spacing: 0.01em;
+
+  @include vp-768 {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 85%;
+    height: 2px;
+    background-color: $color-light-grey;
+    top: 7px;
+    left: 50%;
+    transform: translate(-50%);
+
+    @include vp-768 {
+      top: 12px;
+    }
+  }
+}
+
+.roadmap__item {
+  text-align: center;
+  position: relative;
+  padding-top: 26px;
+  color: rgba($color-zambezi, $alpha: 0.6);
+  margin-right: 10px;
+
+  @include vp-768 {
+    padding-top: 36px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $color-light-grey;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+
+    @include vp-768 {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  &--current {
+    color: $color-zambezi;
+
+    &::before {
+      background-color: $color-purple;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $color-header-grey;
+      top: 4px;
+      left: 50%;
+      transform: translate(-50%);
+
+      @include vp-768 {
+        top: 7px;
+        width: 11px;
+        height: 11px;
+      }
+    }
+  }
+}

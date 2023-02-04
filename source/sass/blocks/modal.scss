@@ -1,0 +1,73 @@
+.modal {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: $trans-default;
+  transform: translateY(-100%);
+
+  &--opened {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.modal__overlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  padding: 20px 40px;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  background-color: #EA627E;
+  border-radius: 50px;
+
+
+  @include vp-768 {
+    border-radius: 70px;
+    padding: 50px;
+    width: 70%;
+    top: 50%;
+  }
+}
+
+.modal__button {
+  border: 2px solid $color-purple;
+  border-radius: 20px;
+  padding: 20px 40px;
+  background-color: $color-purple;
+  transition: $trans-default;
+  color: $color-default-white;
+
+  @include hover-focus {
+    background-color: $color-default-white;
+    color: $color-purple;
+  }
+
+  @include vp-1200 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+
+.modal__text {
+  font-size: 24px;
+  line-height: 29px;
+  color: $color-basic-black;
+
+
+  @include vp-1200 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}

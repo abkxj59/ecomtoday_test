@@ -1,0 +1,9 @@
+.container-xl {
+  @include vp-1200 {
+    padding: 0 11px;
+  }
+
+  @include vp-1400 {
+    max-width: 1140px;
+  }
+}

@@ -1,0 +1,92 @@
+.buy__wrapper {
+  border-radius: 24px;
+  background-color: $color-background-grey;
+
+  @include vp-768 {
+    margin: 0 27px;
+    padding-left: 120px;
+    padding-right: 125px;
+    padding-bottom: 60px;
+  }
+
+  @include vp-1200 {
+    margin: 0;
+    padding: 60px 0;
+    overflow: hidden;
+  }
+}
+
+.buy__promo {
+  padding: 28px 28px 0;
+
+  @include vp-768 {
+    padding: 60px 0 0;
+  }
+
+  @include vp-1200 {
+    padding: 0 60px;
+
+  }
+}
+
+.buy__heading {
+  margin: 0;
+  color: $color-basic-black;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+
+  @include vp-768 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+
+.buy__highlight {
+  color: $color-purple;
+}
+
+.buy__link {
+  color: $color-purple;
+  text-decoration: underline;
+}
+
+.buy__info {
+  color: $color-basic-grey;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 16px 0 28px;
+
+  @include vp-768 {
+    margin: 24px 0 37px;
+    max-width: 380px;
+  }
+
+  @include vp-1200 {
+    margin-bottom: 15px;
+  }
+}
+
+.buy__pic-wrapper {
+  position: relative;
+  height: 100%;
+  margin-left: -20px;
+  margin-right: -25px;
+}
+
+.buy__pic {
+  display: none;
+
+  @include vp-1200 {
+    display: block;
+    position: absolute;
+    object-fit:contain;
+  }
+}
+
+.buy__calc {
+  @include vp-1200 {
+    margin-left: 5px;
+  }
+}
